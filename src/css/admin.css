@@ -1,0 +1,406 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --couleurLink: #fff;
+  --couleurHover: green;
+}
+
+html {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 62.5%;
+  color: #fff;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #707070;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: auto 1fr;
+  place-items: center;
+}
+
+#hero_menu {
+  grid-area: 1 / 1 / 1 / 3;
+  width: 100vw;
+  text-align: right;
+  background-color: #383838;
+  padding: 1rem;
+}
+
+#hero_menu > a {
+    text-decoration: none;
+    color: #a7a7a7;
+    font-size: 2rem;
+    transition: color .3s;
+}
+
+#hero_menu > a:hover {
+    color: #fff;
+}
+
+#hero_menu > a:last-of-type {
+    margin-left: 2rem;
+}
+
+body > p {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-size: 2rem;
+}
+
+#previsualisation {
+  grid-area: 2 / 1 / 2 / 1;
+  margin-left: 4rem;
+  height: 50vh;
+  width: 50vw;
+  background-color: #383838;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  place-items: center;
+  border: solid 2px #fff;
+}
+
+#previsualisation a {
+  text-decoration: none;
+  color: var(--couleurLink);
+  transition: color .3s;
+}
+
+#previsualisation a:hover {
+    color: var(--couleurHover);
+}
+
+#pres {
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+#link__container {
+  width: 90%;
+  display: grid;
+  grid-auto-flow: column;
+  text-align: center;
+  font-size: 2rem;
+}
+
+#panel_admin {
+    grid-area: 2 / 2 / 2 / 2;
+    height: 90%;
+    width: 90%;
+    background-color: #383838;
+    border-radius: 1rem;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
+              0 2px 2px rgba(0,0,0,0.12), 
+              0 4px 4px rgba(0,0,0,0.12), 
+              0 8px 8px rgba(0,0,0,0.12),
+              0 16px 16px rgba(0,0,0,0.12);
+}
+
+#panel_admin > section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#panel_admin > section > h2 {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+#panel_admin > section:first-of-type > h2 {
+  margin-top: 1rem;
+}
+
+#panel_admin > section > form {
+  margin-bottom: 3rem;
+}
+
+#panel_admin > section > form > label {
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+#panel_admin > section > form > input {
+  outline: none;
+}
+
+#panel_admin > section > form > input[type = color] {
+  width: 5rem;
+  height: 5rem;
+  -webkit-appearance: none;
+  border: none;
+  background: none;
+}
+
+#panel_admin > section > form > input[type = submit] {
+  background: none;
+  outline: none;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 500;
+  border: .2rem solid #fff;
+  border-radius: 50%;
+  height: 5rem;
+  width: 5rem;
+  padding: .3rem;
+  margin-top: 2rem;
+  transition: .3s;
+}
+
+#panel_admin > section > form > input[type = submit]:hover {
+  border: .2rem solid rgba(255, 255, 255, 0.808);
+  color: rgba(255, 255, 255, 0.808);
+}
+
+.line_section_panel {
+  display: block;
+  border-bottom: 2px solid #fff;
+  width: 10rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  margin-top: .3rem;
+}
+
+/* FORM COULEURS*/
+
+#panel_admin > section:first-of-type > form {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: repeat(5, 1fr);
+  place-items: center;
+}
+
+/* LABELS FORM COULEURS GRIS POS*/
+#panel_admin > section:first-of-type > form > label:first-of-type {
+  grid-area: 1 / 1 / 1 / 1;
+}
+
+#panel_admin > section:first-of-type > form > label:nth-of-type(2) {
+  grid-area: 1 / 2 / 1 / 2;
+}
+
+#panel_admin > section:first-of-type > form > label:nth-of-type(3)  {
+  grid-area: 1 / 3 / 1 / 3;
+}
+
+#panel_admin > section:first-of-type > form > label:last-of-type {
+  grid-area: 1 / 4 / 1 / 4;
+}
+
+/* INPUT FORM COULEUR GRID POS*/
+
+#panel_admin > section:first-of-type > form > input:first-of-type {
+  grid-area: 2 / 1 / 2 / 1;
+}
+
+#panel_admin > section:first-of-type > form > input:nth-of-type(2) {
+  grid-area: 2 / 2 / 2 / 2;
+}
+
+#panel_admin > section:first-of-type > form > input:nth-of-type(3)  {
+  grid-area: 2 / 3 / 2 / 3;
+}
+
+#panel_admin > section:first-of-type > form > input:nth-of-type(4) {
+  grid-area: 2 / 4 / 2 / 4;
+}
+
+#panel_admin > section:first-of-type > form > input:last-of-type {
+  grid-area: 1 / 5 / 3 / 5;
+}
+
+/* FORM CONTENT */
+#panel_admin > section:nth-of-type(2) > form {
+  display: grid;
+  place-items: center;
+  grid-template-rows: repeat(3, auto);
+  grid-template-columns: repeat(3, auto);
+}
+
+/* LABEL FORM CONTENT */
+#panel_admin > section:nth-of-type(2) > form > label {
+  margin-right: 2rem;
+  justify-self: end;
+}
+#panel_admin > section:nth-of-type(2) > form > label:first-of-type {
+  grid-area: 1 / 1 / 1 / 1;
+}
+#panel_admin > section:nth-of-type(2) > form > label:nth-of-type(2) {
+  grid-area: 2 / 1 / 2 / 1;
+}
+#panel_admin > section:nth-of-type(2) > form > label:nth-of-type(3) {
+  grid-area: 3 / 1 / 3 / 1;
+}
+
+/* INPUT FORM CONTENT */
+#panel_admin > section:nth-of-type(2) > form > input[type = text] {
+  height: 3rem;
+  width: 40rem;
+  text-align: center;
+}
+#panel_admin > section:nth-of-type(2) > form > input:first-of-type {
+  grid-area: 1 / 2 / 1 / 2;
+}
+#panel_admin > section:nth-of-type(2) > form > input:nth-of-type(2) {
+  grid-area: 2 / 2 / 2 / 2;
+}
+#panel_admin > section:nth-of-type(2) > form > input:nth-of-type(3) {
+  grid-area: 3 / 2 / 3 / 2;
+}
+#panel_admin > section:nth-of-type(2) > form > input:nth-of-type(4) {
+  grid-area: 1 / 3 / 4 / 3;
+  margin: 0;
+  margin-left: 2rem;
+}
+
+/* SECTION LINKS */
+#panel_admin > section:nth-of-type(3) {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(6, auto);
+}
+
+/* H2 POS GRID SECTION LINKS */
+#panel_admin > section:nth-of-type(3) > h2:first-of-type {
+  grid-area: 1/1/1/1;
+}
+#panel_admin > section:nth-of-type(3) > h2:nth-of-type(3){
+  grid-area: 1/2/1/2;
+}
+#panel_admin > section:nth-of-type(3) > h2:nth-of-type(2){
+  grid-area: 4/1/4/1;
+}
+
+/* LINE POS GRID SECTION LINKS */
+#panel_admin > section:nth-of-type(3) > .line_section_panel:nth-of-type(1){
+  grid-area: 2/1/2/1;
+}
+#panel_admin > section:nth-of-type(3) > .line_section_panel:nth-of-type(2){
+  grid-area: 5/1/5/1;
+}
+#panel_admin > section:nth-of-type(3) > .line_section_panel:nth-of-type(3){
+  grid-area: 2/2/2/2;
+}
+
+/* FORM GRID SECTION LINKS */
+#panel_admin > section:nth-of-type(3) > form{
+  display: grid;
+  place-items: center;
+}
+#panel_admin > section:nth-of-type(3) > form:nth-of-type(1){
+  grid-area: 3/1/3/1;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(4, auto);
+}
+#panel_admin > section:nth-of-type(3) > form:nth-of-type(2){
+  grid-area: 6/1/6/1;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
+}
+#panel_admin > section:nth-of-type(3) > form:nth-of-type(3){
+  grid-area: 3/2/3/2;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
+}
+#panel_admin > section:nth-of-type(3) > form:nth-of-type(4){
+  grid-area: 4/2/7/2;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(4, auto);
+}
+
+/* INSIDE FORM GRID SECTION LINKS */
+/* ADD */
+/* LABELS */
+#panel_admin > section:nth-of-type(3) > form:nth-of-type(1) > label:nth-of-type(1){
+  grid-area: 1/1/1/1;
+}
+#panel_admin > section:nth-of-type(3) > form:nth-of-type(1) > label:nth-of-type(2){
+  grid-area: 3/1/3/1;
+  margin-top: 1rem;
+}
+
+/* INPUTS */
+#panel_admin > section:nth-of-type(3) > form:nth-of-type(1) > input:nth-of-type(1){
+  grid-area: 2/1/2/1;
+  height: 3rem;
+  width: 20rem;
+}
+#panel_admin > section:nth-of-type(3) > form:nth-of-type(1) > input:nth-of-type(2){
+  grid-area: 4/1/4/1;
+  height: 3rem;
+  width: 20rem;
+}
+#panel_admin > section:nth-of-type(3) > form:nth-of-type(1) > input:nth-of-type(3){
+  grid-area: 1/2/5/2;
+  margin-left: 2rem;
+}
+
+/* DELETE */
+/* LABEL */
+#panel_admin > section:nth-of-type(3) > form:nth-of-type(2) > label:nth-of-type(1){
+  grid-area: 1/1/1/1;
+  text-align: center;
+}
+/* INPUTS */
+#panel_admin > section:nth-of-type(3) > form:nth-of-type(2) > select{
+  grid-area: 2/1/2/1;
+  height: 3rem;
+  width: 15rem;
+  margin-top: 1rem;
+}
+#panel_admin > section:nth-of-type(3) > form:nth-of-type(2) > input:nth-of-type(1){
+  grid-area: 1/2/3/2;
+}
+
+/* UPDATE FORM 1*/
+/* LABELS */
+#panel_admin > section:nth-of-type(3) > form:nth-of-type(3) > label:nth-of-type(1){
+  grid-area: 1/1/1/1;
+  text-align: center;
+}
+/* INPUTS */
+#panel_admin > section:nth-of-type(3) > form:nth-of-type(3) > select{
+  grid-area: 2/1/2/1;
+  height: 3rem;
+  width: 15rem;
+  margin-top: 1rem;
+}
+#panel_admin > section:nth-of-type(3) > form:nth-of-type(3) > input:nth-of-type(1){
+  grid-area: 1/2/3/2;
+}
+
+/* UPDATE FORM 2 */
+/* LABELS */
+#panel_admin > section:nth-of-type(3) > form:nth-of-type(4) > label:nth-of-type(1){
+  grid-area: 1/1/1/1;
+}
+#panel_admin > section:nth-of-type(3) > form:nth-of-type(4) > label:nth-of-type(2){
+  grid-area: 3/1/3/1;
+  margin-top: 1rem;
+}
+
+/* INPUTS */
+#panel_admin > section:nth-of-type(3) > form:nth-of-type(4) > input:nth-of-type(1){
+  grid-area: 2/1/2/1;
+  height: 3rem;
+  width: 20rem;
+}
+#panel_admin > section:nth-of-type(3) > form:nth-of-type(4) > input:nth-of-type(2){
+  grid-area: 4/1/4/1;
+  height: 3rem;
+  width: 20rem;
+}
+#panel_admin > section:nth-of-type(3) > form:nth-of-type(4) > input:nth-of-type(4){
+  grid-area: 1/2/5/2;
+  margin-left: 2rem;
+}

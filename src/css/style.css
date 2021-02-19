@@ -1,0 +1,48 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --couleur: #fff;
+}
+
+html {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 62.5%;
+  color: #fff;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: #383838;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  place-items: center;
+}
+
+body a {
+  text-decoration: none;
+  transition: color .3s;
+}
+
+#pres {
+  text-align: center;
+  font-size: 5rem;
+}
+
+#link__container {
+  width: 90vw;
+  display: grid;
+  grid-auto-flow: column;
+  text-align: center;
+  font-size: 4rem;
+}
+
+
+

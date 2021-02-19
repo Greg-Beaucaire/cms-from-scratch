@@ -1,0 +1,74 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --couleur: #fff;
+}
+
+html {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 62.5%;
+  color: #fff;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: #383838;
+  display: grid;
+  place-items: center;
+}
+
+body > form {
+    display: grid;
+}
+
+body > form > label {
+    font-size: 3rem;
+    margin-bottom: .5rem;
+    margin-left: .5rem;
+}
+
+body > form > input[type = text], body > form > input[type = password] {
+    margin-bottom: 1rem;
+    outline: none;
+    border: none;
+    height: 3rem;
+    width: 30rem;
+    text-align: center;
+    font-size: 2rem;
+    color: #383838;
+}
+
+body > form > input[type = submit] {
+    margin-top: 2rem;
+    width: 15rem;
+    height: auto;
+    justify-self: center;
+    outline: none;
+    border: none;
+    background-color: #fff;
+    font-size: 3rem;
+    color: #383838;
+    padding: .5rem;
+    border-radius: .3rem;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 2px 2px rgba(0, 0, 0, 0.2),
+    0 4px 4px rgba(0, 0, 0, 0.2), 0 8px 8px rgba(0, 0, 0, 0.2);
+  transition: box-shadow .3s;
+}
+
+body > form > input[type = submit]:active {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.020), 0 2px 2px rgba(0, 0, 0, 0.020),
+    0 4px 4px rgba(0, 0, 0, 0.020), 0 8px 8px rgba(0, 0, 0, 0.020),
+    0 16px 16px rgba(0, 0, 0, 0.020);
+}
+
+body > h1 {
+  
+}
